@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+    <h3>Attendance Dashboard</h3>
+</div>
+
+<div class="container">
+
+<form action="/generate" method="POST">
+
+<div class="top-grid">
+    <input type="text" name="college" placeholder="College Name" required>
+    <input type="text" name="class" placeholder="Class / Semester" required>
+    <input type="text" name="subject" placeholder="Subject" required>
+    <input type="number" name="total_classes" id="totalClasses" placeholder="Total Classes" oninput="updateAll()" required>
+</div>
+
+<table id="studentTable">
+<thead>
+<tr>
+<th>#</th>
+<th>Name</th>
+<th>Attended</th>
+<th>%</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="serial">1</td>
+<td><input name="name[]" required></td>
+<td><input name="attended[]" type="number" oninput="calculate(this)" required></td>
+<td><span class="percent">0%</span></td>
+<td><button type="button" class="delete-btn" onclick="deleteRow(this)">❌</button></td>
+</tr>
+</tbody>
+</table>
+
+<div class="btn-group">
+<button type="button" onclick="addRow()">+ Add Student</button>
+<button type="submit" class="generate-btn" onclick="loading(this)">Generate PDF</button>
+</div>
+
+</form>
+</div>
+
+<script src="/static/js/app.js"></script>
+
+</body>
+</html>

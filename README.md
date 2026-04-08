@@ -1,6 +1,6 @@
 # Attendance List Generator
 
 ## 📸 Preview
-![App Screenshot](FRONT PAGE.png)
-![App Screenshot](Attendance Dashboard.png)
-![App Screenshot](OUTPUT.png)
+![App Screenshot](P1.png)
+![App Screenshot](P2.png)
+![App Screenshot](P3.png)
